@@ -5,7 +5,7 @@ const Index = () => import('@/views/index')
 
 const Home = () => import('@/components/Home')
 const Login = () => import('@/components/Login')
-
+const Chat = () => import('@/components/Chat')
 Vue.use(VueRouter)
 
 const routes = [
@@ -26,6 +26,11 @@ const routes = [
         path: 'home',
         component: Home,
         meta: { title: '首页' }
+      },
+      {
+        path: 'chat',
+        component: Chat,
+        meta: { title: '聊天' }
       }
     ]
   }
