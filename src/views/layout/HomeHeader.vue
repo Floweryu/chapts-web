@@ -9,24 +9,9 @@
       <i v-if="!collapse" class="el-icon-s-unfold"></i>
       <i v-else class="el-icon-s-fold"></i>
     </div>
-    <div class="logo">{{ '音乐后台管理 ' }}</div>
+    <div class="logo">{{ 'CHAPTS ' }}</div>
     <div>
       <div class="header-right">
-        <div class="user-avator">
-          <img src="~/assets/image/user.jpg" />
-        </div>
-        <el-dropdown class="user-name" trigger="click" @command="handleCommand">
-          <span class="el-dropdown-link">
-            {{ userName }}
-            <i class="el-icon-caret-bottom"></i>
-          </span>
-
-          <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item command="logout">
-              退出登录
-            </el-dropdown-item>
-          </el-dropdown-menu>
-        </el-dropdown>
         <div class="btn-fullscreen" @click="handleFullScreen">
           <el-tooltip :content="fullscreen ? '取消全屏' : '全屏'" placement="bottom">
             <i class="el-icon-rank"></i>
