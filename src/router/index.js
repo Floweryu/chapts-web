@@ -4,10 +4,20 @@ import VueRouter from 'vue-router'
 const Index = () => import('@/views/index')
 
 const Home = () => import('@/components/Home')
+const Login = () => import('@/components/Login')
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/',
+    redirect: '/login'
+  },
+  {
+    path: '/login',
+    component: Login,
+    meta: { title: '登录' }
+  },
   {
     path: '/',
     component: Index,
