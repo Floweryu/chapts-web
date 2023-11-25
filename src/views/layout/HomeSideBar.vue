@@ -46,11 +46,6 @@ const menuList = [
     title: '首页',
     index: '/home',
     icon: 'el-icon-s-home'
-  },
-  {
-    title: '聊天',
-    index: '/chat',
-    icon: 'el-icon-s-home'
   }
 ]
 export default {
