@@ -1,4 +1,4 @@
-# music-manage
+# chapts-web
 
 ## Project setup
 ```
