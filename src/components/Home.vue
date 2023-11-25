@@ -1,83 +1,12 @@
 <template>
   <div class="main">
-    <div display="flex" style="margin-top:30px">
-      <span style="--i: 1">w</span>
-      <span style="--i: 2">e</span>
-      <span style="--i: 3">b</span>
-      <span style="--i: 4">-</span>
-      <span style="--i: 5">M</span>
-      <span style="--i: 6">u</span>
-      <span style="--i: 7">s</span>
-      <span style="--i: 8">i</span>
-      <span style="--i: 9">c</span>
-    </div>
-
-    <div class="body">
-      <div class="container circle">
-        <div class="box1 circle center"></div>
-        <div class="box2 circle center"></div>
-        <div class="box3 circle center"></div>
-        <div class="box4 circle center"></div>
-        <div class="box5 circle center"></div>
-        <div class="box6 circle">
-          <div class="coil" style="--i:0"></div>
-          <div class="coil" style="--i:1"></div>
-          <div class="coil" style="--i:2"></div>
-          <div class="coil" style="--i:3"></div>
-          <div class="coil" style="--i:4"></div>
-          <div class="coil" style="--i:5"></div>
-          <div class="coil" style="--i:6"></div>
-          <div class="coil" style="--i:7"></div>
-        </div>
-      </div>
-    </div>
-    <div class="content">
-      <p class="font">应用软件实践</p>
-    </div>
-    <div class="content">
-      <p class="font">北京化工大学</p>
-    </div>
-    <div class="el-table">
-      <el-table :data="tableData">
-        <el-table-column prop="duty" label="职责" width="100"></el-table-column>
-        <el-table-column prop="name" label="姓名" width="100"></el-table-column>
-        <el-table-column prop="class" label="班级" width="100"></el-table-column>
-        <el-table-column prop="id" label="学号" width="100"></el-table-column>
-        <el-table-column prop="division" label="分工" width="300"></el-table-column>
-      </el-table>
-    </div>
-    <div class="content">
-      <el-link class="fontLink" href="https://github.com/Pink-Smile/web-music" type="primary">Github项目地址</el-link>
-    </div>
+    
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      tableData: [
-        {
-          duty: '组长',
-          name: '孟铃翔',
-          class: '计科1703',
-          id: '2017040334',
-          division: '歌曲管理的前后端编写，设计文档'
-        },
-        {
-          duty: '组员',
-          name: '车子杰',
-          class: '计科1703',
-          id: '2017040314',
-          division: '用户管理的前后端编写以及登录页面、首页，需求分析'
-        },
-        {
-          duty: '组员',
-          name: '张俊峰',
-          class: '计科1703',
-          id: '2017040330',
-          division: '歌手管理的前后端编写，前后端项目框架搭建和基础公共代码的编写，数据库设计，项目部署'
-        }
-      ]
     }
   }
 }
