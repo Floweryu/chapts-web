@@ -3,7 +3,6 @@
     <el-main>
       <div v-for="(step, index) in steps" :key="index" class="chat-step" v-show="currentStepIndex === index">
         <el-card class="box-card">
-          <img :src="step.imageUrl" alt="Step Image" class="step-image" />
           <div class="option-buttons">
             <el-row type="flex" align="middle" class="row-bg">
               <el-col :span="4" :offset="3">
@@ -15,6 +14,9 @@
               </el-col>
             </el-row>
           </div>
+          <div style="width:1200px;height:600px">
+            <img :src="step.imageUrl" alt="Step Image" style="width:100%;height:100%" />
+          </div>
         </el-card>
       </div>
     </el-main>
@@ -25,9 +27,9 @@
 export default {
   data() {
     return {
-      steps: Array.from({ length: 3 }, (_, i) => ({
-        path: '@/assets/image/image' + i + '.jpg',
-        imageUrl: require(`@/assets/image/image${i + 1}.jpg`), // 修改为实际的图片路径
+      steps: Array.from({ length: 21 }, (_, i) => ({
+        path: '@/assets/image/' + i + '.png',
+        imageUrl: require(`@/assets/image/${i + 1}.png`), // 修改为实际的图片路径
         option1: {
           text: '喜欢'
         },
@@ -69,13 +71,9 @@ export default {
 
 .box-card {
   margin-bottom: 20px;
-}
-
-.step-image,
-.result-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .option-buttons {

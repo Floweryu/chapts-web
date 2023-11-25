@@ -86,7 +86,7 @@ export default {
 }
 
 .el-menu-sidebar:not(.el-menu--collapse) {
-  width: 200px;
+  width: 25vw;
 }
 
 #home-sidebar > ul {
