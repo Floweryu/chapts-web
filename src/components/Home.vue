@@ -26,90 +26,9 @@
 </template>
 
 <script>
-const images = [
-  '@/assets/image/1.png',
-  '@/assets/image/2.png',
-  '@/assets/image/3.png',
-  '@/assets/image/4.png',
-  '@/assets/image/5.png',
-  '@/assets/image/开闭.png',
-  '@/assets/image/选择.png'
-]
 export default {
-  created() {
-    this.images = images
-  },
   data() {
     return {
-      images: [],
-      close: [
-        {
-          imageUrl: require('@/assets/image/闭源1.png'), // 修改为实际的图片路径
-          option1: {
-            text: 'Pre'
-          },
-          option2: {
-            text: 'Next'
-          }
-        },
-        {
-          imageUrl: require('@/assets/image/闭源2.png'), // 修改为实际的图片路径
-          option1: {
-            text: 'Pre'
-          },
-          option2: {
-            text: 'Next'
-          }
-        },
-        {
-          imageUrl: require('@/assets/image/闭源3.png'), // 修改为实际的图片路径
-          option1: {
-            text: 'Pre'
-          },
-          option2: {
-            text: 'Next'
-          }
-        },
-        {
-          imageUrl: require('@/assets/image/闭源4.png'), // 修改为实际的图片路径
-          option1: {
-            text: 'Pre'
-          },
-          option2: {
-            text: 'Next'
-          }
-        },
-        {
-          imageUrl: require('@/assets/image/闭源5.png'), // 修改为实际的图片路径
-          option1: {
-            text: 'Pre'
-          },
-          option2: {
-            text: 'Next'
-          }
-        }
-      ],
-      open: [
-        {
-          imageUrl: require('@/assets/image/开源1.png'), // 修改为实际的图片路径
-          option1: {
-            text: 'Pre'
-          },
-          option2: {
-            text: 'Next'
-          }
-        },
-        {
-          imageUrl: require('@/assets/image/开源2.png'), // 修改为实际的图片路径
-          option1: {
-            text: 'Pre'
-          },
-          option2: {
-            text: 'Next'
-          }
-        }
-      ],
-      select: ['@/assets/image/6.png', '@/assets/image/9.png', '@/assets/image/10.png'],
       steps: [
         {
           imageUrl: require(`@/assets/image/1.png`), // 修改为实际的图片路径
@@ -166,6 +85,78 @@ export default {
           }
         },
         {
+          imageUrl: require(`@/assets/image/开源1.png`), // 修改为实际的图片路径
+          option1: {
+            text: 'Pre'
+          },
+          option2: {
+            text: 'Next'
+          }
+        },
+        {
+          imageUrl: require(`@/assets/image/开源2.png`), // 修改为实际的图片路径
+          option1: {
+            text: 'Pre'
+          },
+          option2: {
+            text: 'Next'
+          }
+        },
+        {
+          imageUrl: require(`@/assets/image/开闭.png`), // 修改为实际的图片路径
+          option1: {
+            text: '开源'
+          },
+          option2: {
+            text: '闭源'
+          }
+        },
+        {
+          imageUrl: require(`@/assets/image/闭源1.png`), // 修改为实际的图片路径
+          option1: {
+            text: 'Pre'
+          },
+          option2: {
+            text: 'Next'
+          }
+        },
+        {
+          imageUrl: require(`@/assets/image/闭源2.png`), // 修改为实际的图片路径
+          option1: {
+            text: 'Pre'
+          },
+          option2: {
+            text: 'Next'
+          }
+        },
+        {
+          imageUrl: require(`@/assets/image/闭源3.png`), // 修改为实际的图片路径
+          option1: {
+            text: 'Pre'
+          },
+          option2: {
+            text: 'Next'
+          }
+        },
+        {
+          imageUrl: require(`@/assets/image/闭源4.png`), // 修改为实际的图片路径
+          option1: {
+            text: 'Pre'
+          },
+          option2: {
+            text: 'Next'
+          }
+        },
+        {
+          imageUrl: require(`@/assets/image/闭源5.png`), // 修改为实际的图片路径
+          option1: {
+            text: 'Pre'
+          },
+          option2: {
+            text: 'Next'
+          }
+        },
+        {
           imageUrl: require(`@/assets/image/选择.png`), // 修改为实际的图片路径
           option1: {
             text: 'llya'
@@ -173,25 +164,42 @@ export default {
           option2: {
             text: 'Altman'
           }
+        },
+        {
+          imageUrl: require(`@/assets/image/6.png`), // 修改为实际的图片路径
+          option1: {
+            text: 'Pre'
+          },
+          option2: {
+            text: 'Next'
+          }
+        },
+        {
+          imageUrl: require(`@/assets/image/9.png`), // 修改为实际的图片路径
+          option1: {
+            text: 'Pre'
+          },
+          option2: {
+            text: 'Next'
+          }
+        },
+        {
+          imageUrl: require(`@/assets/image/10.png`), // 修改为实际的图片路径
+          option1: {
+            text: 'Pre'
+          },
+          option2: {
+            text: 'Next'
+          }
         }
       ],
       currentStepIndex: 0
     }
   },
   methods: {
-    goToNextStep(stepIndex, option) {
+    goToNextStep(stepIndex) {
       // 逻辑处理用户选择的选项，例如更新状态或记录选择
       // ...
-      console.log(`当前步骤: ${stepIndex}, 选择: ${option.text}`)
-      if (option.text == '开源') {
-        this.steps = this.open
-        this.currentStepIndex = 0
-        console.log(this.step)
-      } else if (option.text == '闭源') {
-        this.steps = this.close
-        this.currentStepIndex = 0
-        console.log(this.step)
-      }
       // 进入下一个步骤
       if (stepIndex < this.steps.length - 1) {
         this.currentStepIndex++
